@@ -1,0 +1,9 @@
+{% extends 'helpers/base.html' %}
+{% block content %}
+    <h2>Delete Post</h2>
+    <form action="" method="post" class="ui form">
+        {% csrf_token %}
+        <p>Are you sure you want to delete "<span>{{post.title}}</span>"</p>
+        <button class="ui negative button" type="submit">Confirm</button>
+    </form>
+{% endblock %}

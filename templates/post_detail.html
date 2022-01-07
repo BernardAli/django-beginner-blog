@@ -1,0 +1,9 @@
+{% extends 'helpers/base.html' %}
+{% block content %}
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }}</p>
+
+    <a href="http:{% url 'post_update' post.id %}" class="ui button">Edit Post</a>
+    <a href="http:{% url 'post_delete' post.pk %}" class="ui negative button">Delete Post</a>
+
+{% endblock %}

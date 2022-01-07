@@ -1,0 +1,15 @@
+{% extends 'helpers/base.html' %}
+{% block content %}
+    <div class="ui list">
+        {% for post in object_list%}
+            <div class="item">
+                <div class="content">
+                    <h2><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h2>
+                    <p>{{ post.body }}</p>
+                    <br>
+                </div>
+            </div>
+        {% empty %}
+        {% endfor %}
+    </div>
+{% endblock %}
